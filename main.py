@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from app.static import static_router
+from app.dynamic import dynamic_router
 
 app = FastAPI()
 
@@ -27,6 +28,7 @@ def somar(num1: int, num2: int):
 
 
 app.include_router(static_router)
+app.include_router(dynamic_router)
 
 
 if __name__ == '__main__':
