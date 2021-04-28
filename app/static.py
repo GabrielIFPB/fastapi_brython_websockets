@@ -7,7 +7,7 @@ static_router = APIRouter()
 templates = Jinja2Templates(directory='templates')
 
 
-@static_router.get('/template', response_class=HTMLResponse)
+@static_router.get('/page-static', response_class=HTMLResponse)
 def route(request: Request):
 	return templates.TemplateResponse(
 		'static.html',
