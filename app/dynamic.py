@@ -1,3 +1,4 @@
+
 from typing import Dict
 
 from fastapi import APIRouter, Request
@@ -16,8 +17,7 @@ class Message(BaseModel):
 @dynamic_router.get('/page-dynamic', response_class=HTMLResponse)
 def route(request: Request):
 	return templates.TemplateResponse(
-		'dynamic.html',
-		{'request': request}
+		'dynamic.html', {'request': request}
 	)
 
 
@@ -30,6 +30,5 @@ def route_data(request: Request) -> Dict[str, int]:
 @dynamic_router.get('/polling', response_class=HTMLResponse)
 def polling(request: Request):
 	return templates.TemplateResponse(
-		'polling.html',
-		{'request': request}
+		'polling.html', {'request': request}
 	)
