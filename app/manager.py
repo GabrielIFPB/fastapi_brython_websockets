@@ -15,5 +15,8 @@ class ConnectionManager:
 		for con in self.connections:
 			await con.send_text(message)
 
+	def disconnect(self, websocket: WebSocket):
+		self.connections.remove(websocket)
+
 
 manager = ConnectionManager()
