@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="messages" style="overflow-y: scroll; height: 400px;"></div>
+    <textarea cols="100" id="text" rows="5"></textarea>
+    <button id="send">Send</button>
+{% endblock %}
+
+{% block script %}
+    <script type="text/python" src="/static/full_duplex.py"></script>
+{% endblock %}
